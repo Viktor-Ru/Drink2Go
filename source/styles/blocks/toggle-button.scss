@@ -1,0 +1,23 @@
+.toggle-button {
+  margin: 0;
+  margin-right: -20px;
+  padding: 0;
+  border: none;
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+  background-image: url("../../images/icons/stack.svg#menu-open");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 22px;
+
+  &:active {
+    background-color: $base-secondary;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .toggle-button {
+    display: none;
+  }
+}

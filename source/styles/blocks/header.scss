@@ -1,0 +1,15 @@
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+@media (min-width: $tablet-width) {
+  .header {
+    padding-top: 10px;
+  }
+}
+
+// @media (min-width: $desktop-width) {
+
+// }

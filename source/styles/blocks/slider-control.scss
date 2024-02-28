@@ -1,0 +1,102 @@
+.slider-control {
+  position: relative;
+}
+
+.slider-control__button {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border: none;
+  background-color: transparent;
+  background-image: url("../../images/icons/stack.svg#slider-btn");
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 0;
+  width: 13px;
+
+  &:hover:not(:disabled) {
+    background-color: $base-white;
+  }
+
+  &:focus:not(:disabled) {
+    background-color: $base-white;
+  }
+
+  &:active:not(:disabled) {
+    background: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
+  }
+
+  &:disabled {
+    cursor: auto;
+    background-image: url("../../images/icons/stack.svg#slider-btn-dis");
+  }
+}
+
+.slider-control__button--left {
+  left: 0;
+}
+
+.slider-control__button--right {
+  right: 0;
+  transform: rotateY(180deg);
+}
+
+
+.slider-control__pagination {
+  display: none;
+}
+
+.slider-control__pagination-button {
+  border: none;
+  width: 62px;
+  height: 4px;
+  background-color: $base-white;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $primary-opacity;
+  }
+
+  &:focus {
+    background-color: $primary-opacity;
+  }
+
+  &:active {
+    background-color: $base-primary;
+  }
+}
+
+.slider-control__pagination-button--curent {
+  background-color: $base-primary;
+}
+
+@media (min-width: $tablet-width) {
+  .slider-control__button {
+    background-position: center -122px;
+  }
+
+  .slider-control__button--left {
+    left: 33px;
+  }
+
+  .slider-control__button--right {
+    right: 33px;
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+  .slider-control__pagination {
+    z-index: 2;
+    display: block;
+    position: absolute;
+    bottom: 66px;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  .slider-control__pagination-button {
+    margin: 0 2px;
+  }
+}

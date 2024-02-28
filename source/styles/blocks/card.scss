@@ -1,0 +1,54 @@
+.card {
+  padding: 20px;
+}
+
+.card__img {
+  display: block;
+  margin: 0 auto;
+}
+
+.card__link {
+  position: relative;
+  color: $base-white;
+  background-color: $base-primary;
+  font-size: 14px;
+  line-height: 20px;
+  text-decoration: none;
+  border-radius: 4px;
+  padding: 8px 20px 8px 46px;
+
+  &::before {
+    display: block;
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 16px;
+    left: 2px;
+    top: 1px;
+    background-image: url("../../images/icons/stack.svg#card-basket");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &:hover {
+    background-color: $primary-lighter;
+  }
+
+  &:focus {
+    background-color: $primary-lighter;
+  }
+
+  &:active {
+    background-color: $primary-darker;
+  }
+}
+
+.card__link--disablet {
+  background-color: $base-grey;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $base-grey;
+  }
+}

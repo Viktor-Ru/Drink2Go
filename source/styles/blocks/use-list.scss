@@ -1,0 +1,93 @@
+.use-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.use-list__link {
+  text-decoration: none;
+  color: $base-black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+
+  &::before {
+    display: block;
+    content: "";
+    width: 19px;
+    height: 19px;
+    background-color: $base-black;
+  }
+
+  &:active {
+    background-color: $base-secondary;
+  }
+}
+
+.use-list__link--user::before {
+  mask-image: url("../../images/icons/stack.svg#user");
+}
+
+.use-list__link--basket::before {
+  mask-image: url("../../images/icons/stack.svg#basket");
+}
+
+.use-list__text {
+  display: none;
+}
+
+
+@media (min-width: $tablet-width) {
+  .use-list {
+    margin-left: 60px;
+  }
+
+  .use-list__link {
+    align-items: start;
+    padding-top: 10px;
+    height: 38px;
+
+    &:hover {
+      color: $base-primary;
+    }
+
+    &:focus {
+      color: $base-primary;
+    }
+
+    &:hover::before {
+      background-color: $base-primary;
+    }
+
+    &:focus::before {
+      background-color: $base-primary;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .use-list {
+    margin-right: 19px;
+    margin-left: 180px;
+    padding-bottom: 19px;
+    gap: 59px;
+  }
+
+  .use-list__link {
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.1em;
+    width: auto;
+    height: auto;
+  }
+
+  .use-list__text {
+    display: inline;
+    margin-left: 7px;
+  }
+}

@@ -1,0 +1,14 @@
+.pagination-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+// .pagination-list__item {}
+
+.pagination-list__link {
+  text-decoration: none;
+  color: $base-primary;
+  font-size: 16px;
+  line-height: 24px;
+}

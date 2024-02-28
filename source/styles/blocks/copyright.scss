@@ -1,0 +1,61 @@
+.copyright {
+  display: block;
+  width: 190px;
+  margin: 13px auto 25px;
+  position: relative;
+  text-decoration: none;
+  color: $base-grey;
+  font-size: 12px;
+  line-height: 16px;
+  padding-right: 15px;
+  letter-spacing: 0.06em;
+
+  &::after {
+    display: block;
+    position: absolute;
+    content: "";
+    width: 12px;
+    height: 16px;
+    top: 1px;
+    right: 0;
+    background-color: $base-grey;
+    mask-image: url("../../images/icons/stack.svg#html-academy");
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .copyright {
+    margin-top: 6px;
+    margin-bottom: 30px;
+
+    &:hover {
+      color: $base-primary;
+    }
+
+    &:focus {
+      color: $base-primary;
+    }
+
+    &:active {
+      color: $primary-darker;
+    }
+
+    &:hover::after {
+      background-color: $base-primary;
+    }
+
+    &:focus::after {
+      background-color: $base-primary;
+    }
+
+    &:active::after {
+      background-color: $primary-darker;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .copyright {
+    margin-top: 0;
+  }
+}
