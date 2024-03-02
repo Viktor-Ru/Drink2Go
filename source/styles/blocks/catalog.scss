@@ -27,6 +27,7 @@
 
 @media (min-width: $tablet-width) {
   .catalog__list {
+    grid-template-columns: 1fr 1fr;
     gap: 30px;
   }
 }
