@@ -1,4 +1,6 @@
-// .catalog {}
+.catalog {
+  background-color: $lightest-grey;
+}
 
 .catalog__title {
   color: $base-primary;
@@ -14,16 +16,17 @@
   text-align: center;
 }
 
-.catalog__ist {
+.catalog__list {
   margin: 0;
   padding: 0;
   list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
 }
 
 @media (min-width: $tablet-width) {
-  .catalog__ist {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  .catalog__list {
     gap: 30px;
   }
 }
@@ -34,7 +37,7 @@
     line-height: 64px;
   }
 
-  .catalog__ist {
+  .catalog__list {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
   }
