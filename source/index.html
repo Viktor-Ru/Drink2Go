@@ -242,51 +242,62 @@
             <div class="form__name-wrapper">
               <fieldset class="form__fieldset">
                 <legend class="form__legend">Наличие молока</legend>
-                <label class="form__label">
-                  <input class="form__input" type="radio" name="milk" value="unimportant" checked>
-                  Неважно
+                <label class="form__label form__label--radio">
+                  <input class="form__radio visually-hidden" type="radio" name="milk" value="unimportant" checked>
+                  <span class="form__radio-mark"></span>
+                  <span class="form__text">Неважно</span>
                 </label>
-                <label class="form__label">
-                  <input class="form__input" type="radio" name="milk" value="animal">
-                  Только животное
+                <label class="form__label form__label--radio">
+                  <input class="form__radio visually-hidden" type="radio" name="milk" value="animal">
+                  <span class="form__radio-mark"></span>
+                  <span class="form__text">Только животное</span>
                 </label>
-                <label class="form__label">
-                  <input class="form__input" type="radio" name="milk" value="vegetable">
-                  Только растительное
+                <label class="form__label form__label--radio">
+                  <input class="form__radio visually-hidden" type="radio" name="milk" value="vegetable">
+                  <span class="form__radio-mark"></span>
+                  <span class="form__text">Только растительное</span>
                 </label>
-                <label class="form__label">
-                  <input class="form__input" type="radio" name="milk" value="without">
-                  Без молока
+                <label class="form__label form__label--radio">
+                  <input class="form__radio visually-hidden" type="radio" name="milk" value="without">
+                  <span class="form__radio-mark"></span>
+                  <span class="form__text">Без молока</span>
                 </label>
               </fieldset>
             </div>
             <div class="form__name-wrapper">
               <fieldset class="form__fieldset">
                 <legend class="form__legend">Страна произрастания</legend>
-                <label class="form__label">
-                  <input class="form__input" type="checkbox" name="brazil" checked>
-                  Бразилия
+                <label class="form__label form__label--checkbox">
+                  <input class="form__checkbox visually-hidden" type="checkbox" name="brazil" checked>
+                  <span class="form__checkbox-mark"></span>
+                  <span class="form__text">Бразилия</span>
                 </label>
-                <label class="form__label">
-                  <input class="form__input" type="checkbox" name="ethiopia">
-                  Эфиопия
+                <label class="form__label form__label--checkbox">
+                  <input class="form__checkbox visually-hidden" type="checkbox" name="ethiopia">
+                  <span class="form__checkbox-mark"></span>
+                  <span class="form__text">Эфиопия</span>
                 </label>
-                <label class="form__label">
-                  <input class="form__input" type="checkbox" name="colombia">
-                  Колумбия
+                <label class="form__label form__label--checkbox">
+                  <input class="form__checkbox visually-hidden" type="checkbox" name="colombia">
+                  <span class="form__checkbox-mark"></span>
+                  <span class="form__text">Колумбия</span>
                 </label>
-                <label class="form__label">
-                  <input class="form__input" type="checkbox" name="costa-rica">
-                  Коста-Рика
+                <label class="form__label form__label--checkbox">
+                  <input class="form__checkbox visually-hidden" type="checkbox" name="costa-rica">
+                  <span class="form__checkbox-mark"></span>
+                  <span class="form__text">Коста-Рика</span>
                 </label>
-                <label class="form__label">
-                  <input class="form__input" type="checkbox" name="peru">
-                  Перу
+                <label class="form__label form__label--checkbox">
+                  <input class="form__checkbox visually-hidden" type="checkbox" name="peru">
+                  <span class="form__checkbox-mark"></span>
+                  <span class="form__text">Перу</span>
                 </label>
               </fieldset>
             </div>
-            <button type="submit">Применить</button>
-            <button type="reset">Сбросить</button>
+            <div class="form__button-wrapper">
+              <button class="form__button form__button--submit" type="submit">Применить</button>
+              <button class="form__button form__button--reset" type="reset">Сбросить</button>
+            </div>
           </form>
 
           <ul class="catalog__list">

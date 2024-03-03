@@ -1,0 +1,217 @@
+.form {
+  padding-bottom: 20px;
+}
+
+.form__fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.form__legend {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.form__label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.form__text {
+  font-size: 16px;
+  line-height: 24px;
+  margin-left: 10px;
+}
+
+.form__radio-mark {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-color: $base-white;
+  border-radius: 50%;
+  border: 2px solid $base-grey;
+  position: relative;
+}
+
+.form__label:focus:not(:has(.form__radio:disabled)) .form__radio-mark,
+.form__label:hover:not(:has(.form__radio:disabled)) .form__radio-mark {
+  border: 2px solid $base-primary;
+}
+
+.form__label:hover:not(:has(.form__radio:disabled)) .form__radio-mark::before,
+.form__label:focus:not(:has(.form__radio:disabled)) .form__radio-mark::before {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: $primary-opacity;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form__radio:checked + .form__radio-mark {
+  border: 2px solid $base-primary;
+}
+
+.form__radio:checked + .form__radio-mark::before {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: $base-primary !important;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form__label--radio:has(.form__radio:disabled) {
+  opacity: 0.3;
+}
+
+.form__checkbox-mark {
+  display: block;
+  position: relative;
+  width: 38px;
+  height: 20px;
+  border: 2px solid $base-grey;
+  border-radius: 12px;
+  background-color: $base-grey;
+
+  &::before {
+    display: block;
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: $base-white;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 2px;
+  }
+}
+
+.form__label:focus:not(:has(.form__checkbox:disabled)) .form__checkbox-mark,
+.form__label:hover:not(:has(.form__checkbox:disabled)) .form__checkbox-mark {
+  background-color: $primary-opacity;
+  border: 2px solid $base-primary;
+}
+
+.form__checkbox:checked + .form__checkbox-mark {
+  background-color: $base-primary;
+  border: 2px solid $base-primary;
+}
+
+.form__checkbox:checked + .form__checkbox-mark::before {
+  left: auto;
+  right: 2px;
+}
+
+.form__label--checkbox:has(.form__checkbox:disabled) {
+  opacity: 0.3;
+}
+
+.form__button {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border: none;
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 24px;
+  cursor: pointer;
+}
+
+.form__button--submit {
+  margin-bottom: 10px;
+  background-color: $base-primary;
+  color: $base-white;
+
+  &:focus {
+    background-color: $primary-lighter;
+  }
+
+  &:hover {
+    background-color: $primary-lighter;
+  }
+
+  &:active {
+    background-color: $primary-darker;
+  }
+
+  &:disabled {
+    background-color: $base-grey;
+    cursor: not-allowed;
+  }
+}
+
+.form__button--reset {
+  background-color: $base-white;
+  color: $base-primary;
+
+  &:focus {
+    color: $base-white;
+    background-color: $primary-lighter;
+  }
+
+  &:hover {
+    color: $base-white;
+    background-color: $primary-lighter;
+  }
+
+  &:active {
+    color: $base-white;
+    background-color: $primary-darker;
+  }
+
+  &:disabled {
+    color: $base-white;
+    background-color: $base-grey;
+    cursor: not-allowed;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .form__button-wrapper {
+    grid-column: 1 / 4;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .form__button {
+    width: auto;
+    min-width: 137px;
+  }
+
+  .form__button--submit {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form {
+    display: block;
+  }
+
+  .form__button-wrapper {
+    justify-content: start;
+  }
+}
