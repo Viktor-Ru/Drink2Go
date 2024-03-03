@@ -1,5 +1,6 @@
 .catalog {
   background-color: $lightest-grey;
+  padding-top: 50px;
 }
 
 .catalog__title {
@@ -8,12 +9,18 @@
   font-size: 12px;
   line-height: 16px;
   text-align: center;
+  letter-spacing: 0.1em;
+  margin: 0;
+  margin-bottom: 5px;
 }
 
 .catalog__promo {
   font-size: 24px;
   line-height: 36px;
   font-weight: 700;
+  letter-spacing: 0.04em;
+  margin: 0;
+  margin-bottom: 20px;
   text-align: center;
 }
 
@@ -21,12 +28,20 @@
   display: flex;
   justify-content: space-between;
   font-weight: 700;
-  margin-bottom: 15px;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.07em;
+  margin-top: 25px;
+  margin-bottom: 18px;
 }
 
 .catalog__sorting-select {
   color: $base-primary;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
   font-weight: 700;
+  letter-spacing: 0.07em;
   border: none;
   background-color: transparent;
   border-radius: 4px;

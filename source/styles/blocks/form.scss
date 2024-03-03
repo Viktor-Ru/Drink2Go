@@ -2,19 +2,26 @@
   padding-bottom: 20px;
 }
 
+.form__price-wrapper {
+  min-height: 162px; // FIXME Убрать высоту
+}
+
 .form__fieldset {
   border: none;
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
+  margin-bottom: 10px;
 }
 
 .form__legend {
+  padding: 0;
   font-size: 16px;
   line-height: 24px;
   font-weight: 700;
   margin-bottom: 20px;
+  letter-spacing: 0.06em;
 }
 
 .form__label {
@@ -26,13 +33,14 @@
 .form__text {
   font-size: 16px;
   line-height: 24px;
-  margin-left: 10px;
+  margin-left: 11px;
+  letter-spacing: 0.08em;
 }
 
 .form__radio-mark {
   display: block;
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   background-color: $base-white;
   border-radius: 50%;
   border: 2px solid $base-grey;
@@ -127,15 +135,17 @@
   display: block;
   width: 100%;
   border: none;
-  padding: 5px;
+  padding: 8px;
   border-radius: 4px;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-size: 16px;
   line-height: 24px;
+  letter-spacing: 0.08em;
   cursor: pointer;
 }
 
 .form__button--submit {
-  margin-bottom: 10px;
+  margin-bottom: 21px;
   background-color: $base-primary;
   color: $base-white;
 

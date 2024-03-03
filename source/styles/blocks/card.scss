@@ -1,5 +1,6 @@
 .card {
   padding: 20px;
+  padding-top: 40px;
   background-color: $base-white;
   border-radius: 4px;
 
@@ -11,6 +12,21 @@
 .card__img {
   display: block;
   margin: 0 auto;
+  margin-bottom: 23px;
+}
+
+.card__title {
+  margin: 0;
+  margin-bottom: 5px;
+  font-size: 18px;
+  line-height: 32px;
+  letter-spacing: 0.06em;
+}
+
+.card__text {
+  margin: 0;
+  margin-bottom: 16px;
+  letter-spacing: 0.06em;
 }
 
 .card__price-wrapper {
@@ -31,6 +47,7 @@
   background-color: $base-primary;
   font-size: 14px;
   line-height: 20px;
+  letter-spacing: 0.08em;
   text-decoration: none;
   border-radius: 4px;
   padding: 8px 20px 8px 46px;
