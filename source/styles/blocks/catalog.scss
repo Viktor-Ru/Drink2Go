@@ -17,6 +17,26 @@
   text-align: center;
 }
 
+.catalog__sorting-label {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.catalog__sorting-select {
+  color: $base-primary;
+  font-weight: 700;
+  border: none;
+  background-color: transparent;
+  border-radius: 4px;
+  text-align: right;
+
+  &:hover {
+    background-color: $primary-opacity;
+  }
+}
+
 .catalog__list {
   margin: 0;
   padding: 0;
@@ -27,6 +47,10 @@
 }
 
 @media (min-width: $tablet-width) {
+  .catalog__sorting-label {
+    justify-content: end;
+  }
+
   .catalog__list {
     grid-template-columns: 1fr 1fr;
     gap: 30px;
