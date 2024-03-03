@@ -16,11 +16,11 @@
   width: 13px;
 
   &:hover:not(:disabled) {
-    background-color: $base-white;
+    background-color: rgba(225, 225, 225, 0.5);
   }
 
   &:focus:not(:disabled) {
-    background-color: $base-white;
+    background-color: rgba(225, 225, 225, 0.5);
   }
 
   &:active:not(:disabled) {
