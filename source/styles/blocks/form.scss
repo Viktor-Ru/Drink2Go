@@ -66,11 +66,11 @@
   transform: translate(-50%, -50%);
 }
 
-.form__radio:checked + .form__radio-mark {
+.form__radio:checked+.form__radio-mark {
   border: 2px solid $base-primary;
 }
 
-.form__radio:checked + .form__radio-mark::before {
+.form__radio:checked+.form__radio-mark::before {
   display: block;
   content: "";
   position: absolute;
@@ -116,12 +116,12 @@
   border: 2px solid $base-primary;
 }
 
-.form__checkbox:checked + .form__checkbox-mark {
+.form__checkbox:checked+.form__checkbox-mark {
   background-color: $base-primary;
   border: 2px solid $base-primary;
 }
 
-.form__checkbox:checked + .form__checkbox-mark::before {
+.form__checkbox:checked+.form__checkbox-mark::before {
   left: auto;
   right: 2px;
 }
@@ -224,7 +224,18 @@
     display: block;
   }
 
-  .form__button-wrapper {
-    justify-content: start;
+  .form__price-wrapper {
+    min-height: 160px;  // FIXME Убрать высоту
   }
+
+  .form__button-wrapper {
+    gap: 22px;
+    margin-top: 18px;
+    justify-content: start;
+    padding-left: 0;
+  }
+
+  .form__button {
+    min-width: 149px;
+}
 }
