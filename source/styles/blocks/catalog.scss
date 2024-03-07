@@ -62,8 +62,21 @@
 }
 
 @media (min-width: $tablet-width) {
+  .catalog {
+    padding-top: 82px;
+  }
+
   .catalog__sorting-label {
     justify-content: end;
+    margin-right: 8px;
+    column-gap: 10px;
+    margin-bottom: 29px;
+  }
+
+  .catalog__promo {
+    font-size: 42px;
+    line-height: 64px;
+    letter-spacing: 0.06em;
   }
 
   .catalog__list {
@@ -73,11 +86,6 @@
 }
 
 @media (min-width: $desktop-width) {
-  .catalog__promo {
-    font-size: 42px;
-    line-height: 64px;
-  }
-
   .catalog__list {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
